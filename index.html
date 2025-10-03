@@ -121,6 +121,9 @@
             text-align: left;
             font-size: 150%;
         }
+        .text-name {
+            font-size: 275%;
+        }
     </style>
 </head>
 
@@ -151,7 +154,7 @@
                         <div class="col-md-12 text-center">
                             <img src="imagenes/perfil.jpg" alt="Foto de perfil"
                                 class="profile-pic animate__animated animate__fadeInDown">
-                            <div class="display-4 animate__animated animate__fadeInDown">Juan Carlos Yasig</div>
+                            <div class="display-4 animate__animated animate__fadeInDown text-name">Juan Carlos Yasig</div>
                             <p class="lead animate__animated animate__fadeInUp">Desarrollador Web</p>
                         </div>
                         <div class="col-md-12">
@@ -174,7 +177,7 @@
 
                 <div class="col-md-12">
                     <div class="row justify-content-center mb-3">
-                        <div class="col-6">
+                        <!-- <div class="col-6">
                             <div class="card text-center p-3"
                                 style="border-radius: 16px; min-width: 120px; background: var(--card-bg); color: var(--text-main);">
                                 <div class="mb-2">
@@ -185,10 +188,10 @@
                                     </span>
                                 </div>
                                 <div>
-                                    <span id="emailText" style="font-size: 76%;">juancarlosyasig-85@hotmail.com</span>
+                                    <span id="emailText" style="font-size: 60%;">juancarlosyasig-85@hotmail.com</span>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="col-6">
                             <div class="card text-center p-3"
                                 style="border-radius: 16px; min-width: 120px; background: var(--card-bg); color: var(--text-main);">
@@ -206,7 +209,7 @@
                         </div>
                     </div>
                     <div class="row justify-content-center">
-                        <div class="col-auto">
+                        <div class="col-md-2">
                             <a href="https://www.facebook.com/junior.yasig.9" target="_blank" class="mx-2"
                                 data-toggle="tooltip" title="Facebook">
                                 <span class="rounded-circle bg-light d-inline-block text-center">
@@ -215,7 +218,7 @@
                                 </span>
                             </a>
                         </div>
-                        <div class="col-auto">
+                        <div class="col-md-2">
                             <a href="https://instagram.com/juanelocy" target="_blank" class="mx-2" data-toggle="tooltip"
                                 title="Instagram">
                                 <span class="rounded-circle bg-light d-inline-block text-center">
@@ -224,7 +227,7 @@
                                 </span>
                             </a>
                         </div>
-                        <div class="col-auto">
+                        <div class="col-md-2">
                             <a href="https://github.com/juanelocy" target="_blank" class="mx-2" data-toggle="tooltip"
                                 title="GitHub">
                                 <span class="rounded-circle bg-light d-inline-block text-center">
@@ -233,7 +236,7 @@
                                 </span>
                             </a>
                         </div>
-                        <div class="col-auto">
+                        <div class="col-md-2">
                             <a href="https://linkedin.com/in/juancarlosyasig" target="_blank" class="mx-2"
                                 data-toggle="tooltip" title="LinkedIn">
                                 <span class="rounded-circle bg-light d-inline-block text-center">
@@ -242,11 +245,20 @@
                                 </span>
                             </a>
                         </div>
-                        <div class="col-auto">
+                        <div class="col-md-2">
                             <a href="https://wa.me/593967212283?text=Hola%20Juan%2C%20te%20contacto%20desde%20tu%20Hoja%20de%20Vida%20Web"
                                 target="_blank" class="mx-2" data-toggle="tooltip" title="WhatsApp">
                                 <span class="rounded-circle bg-light d-inline-block text-center">
                                     <img src="iconos/wh.png" alt="WhatsApp" width="40" height="40"
+                                        style="vertical-align:middle;">
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col-md-2">
+                            <a href="mailto:juancarlosyasig-85@hotmail.com" 
+                               target="_blank" class="mx-2" data-toggle="tooltip" title="Correo">
+                                <span class="rounded-circle bg-light d-inline-block text-center">
+                                    <img src="iconos/email.png" alt="Correo" width="40" height="40"
                                         style="vertical-align:middle;">
                                 </span>
                             </a>
@@ -401,48 +413,66 @@
                     </div>
 
                     <!-- Modal Proyecto 1 -->
-                    <div class="modal fade" id="modalProyecto1" tabindex="-1" role="dialog"
+                    <div class="modal fade border-radius" id="modalProyecto1" tabindex="-1" role="dialog"
                         aria-labelledby="modalProyecto1Label" aria-hidden="true">
                         <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content" style="color:#232526;">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="modalProyecto1Label">Tesis: Sistema de Ciberseguridad
-                                        con Nmap e IA</h5>
+                                <div class="modal-header" style="background: var(--card-bg);">
+                                    <h5 class="modal-title" style="color: var(--text-main);" id="modalProyecto1Label">Tesis: Sistema de Ciberseguridad con Nmap e IA</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <div class="modal-body">
-                                    <p>Proyecto de tesis enfocado en la ciberseguridad, donde se desarrolló un sistema
-                                        que realiza escaneo de vulnerabilidades en redes usando Nmap y emplea
-                                        inteligencia artificial para analizar los resultados y proponer acciones de
-                                        mitigación. Incluye integración con bases de datos y reportes automáticos.</p>
-                                    <p><strong>Tecnologías:</strong> Python, Nmap, IA, SQL</p>
+                                <div class="modal-body" style="text-align: justify;">
+                                    <p><strong>Resumen:</strong> Fortify AI es una aplicación web para analizar la seguridad de dispositivos en redes locales mediante escaneos automáticos de puertos y servicios usando Nmap. El sistema valida direcciones IP, ejecuta escaneos rápidos, muestra resultados en una interfaz moderna y responsiva, y utiliza inteligencia artificial para analizar vulnerabilidades y proponer acciones de mitigación. Todo el flujo es dinámico y seguro, sin almacenar datos sensibles.</p>
+                                    <p><strong>Tecnologías y lenguajes:</strong> PHP, Python, Nmap, Google Generative AI, AJAX, Bootstrap 5, FontAwesome, SQL, HTML, CSS, JavaScript</p>
+                                    <div class="row">
+                                        <div class="col-md-12 mb-3">
+                                            <div class="card">
+                                                <div class="card-header text-center" style="background:var(--card-accent);color:#232526;">
+                                                    Fortify AI - Interfaz principal
+                                                </div>
+                                                <div class="card-body text-center">
+                                                    <img src="imagenes/iteracion5.png" alt="Fortify AI Captura 1" class="img-fluid" style="max-height:200px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <a href="https://github.com/juanelocy/UIC_Tesis_YasigJuan" target="_blank"
-                                        style="color:var(--text-accent)">Ver repositorio en GitHub</a>
+                                        style="color: black">Ver repositorio en GitHub</a>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div></div>
 
                     <!-- Modal Proyecto 2 -->
-                    <div class="modal fade" id="modalProyecto2" tabindex="-1" role="dialog"
+                    <div class="modal fade border-radius" id="modalProyecto2" tabindex="-1" role="dialog"
                         aria-labelledby="modalProyecto2Label" aria-hidden="true">
                         <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content" style="color:#232526;">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="modalProyecto2Label">Página web informativa</h5>
+                                <div class="modal-header" style="background: var(--card-bg);">
+                                    <h5 class="modal-title" style="color: var(--text-main);" id="modalProyecto2Label">Página web informativa</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <div class="modal-body">
-                                    <p>Desarrollo y despliegue de una página web informativa sobre sostenibilidad y
-                                        medio ambiente, alojada en Vercel. El sitio incluye diseño responsivo,
-                                        optimización SEO y recursos multimedia.</p>
-                                    <p><strong>Tecnologías:</strong> HTML, CSS, Bootstrap, Vercel</p>
+                                <div class="modal-body" style="text-align: justify;">
+                                    <p><strong>Resumen:</strong> Greenesse es una página web informativa dedicada a la sostenibilidad y el medio ambiente. El sitio ofrece recursos educativos, artículos y multimedia para concienciar sobre prácticas ecológicas y el impacto ambiental. Cuenta con diseño responsivo, optimización SEO y una experiencia de usuario moderna, facilitando el acceso a información relevante sobre sostenibilidad.</p>
+                                    <p><strong>Tecnologías y lenguajes:</strong> HTML, CSS, Bootstrap, Vercel</p>
+                                    <div class="row">
+                                        <div class="col-md-12 mb-3">
+                                            <div class="card">
+                                                <div class="card-header text-center" style="background:var(--card-accent);color:#232526;">
+                                                    Greenesse - Página principal
+                                                </div>
+                                                <div class="card-body text-center">
+                                                    <img src="imagenes/greenesse.png" alt="Greenesse Captura" class="img-fluid" style="max-height:200px;">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <a href="https://github.com/JuanitoYasig/Greenesse" target="_blank"
-                                        style="color:var(--text-accent)">Ver repositorio en GitHub</a>
+                                        style="color: black">Ver repositorio en GitHub</a>
                                 </div>
                             </div>
                         </div>
