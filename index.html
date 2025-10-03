@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Madimi+One&display=swap"
+        rel="stylesheet">
+    <style>
+        /*
+        paleta de colores
+        #BD2A2E
+        #3B3936
+        #B2BEBF
+        #889C9B
+        #486966
+        */
+        :root {
+            --gradient-start: #3B3936;
+            --gradient-end: #B2BEBF;
+            --card-bg: #486966;
+            --card-accent: #889C9B;
+            --text-main: #ffffff;
+            --text-accent: #26d0ce;
+        }
+
+        * {
+            font-family: "Kanit", sans-serif;
+        }
+
+        html {
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+        }
+
+        body {
+            background: transparent;
+            color: var(--text-main);
+            margin-left: 5%;
+            margin-right: 5%;
+            overflow-x: hidden;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--text-accent);
+            margin-bottom: 24px;
+            font-weight: 700;
+            border-bottom: 2px solid var(--card-accent);
+            padding-bottom: 10px;
+        }
+
+        .profile-pic {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid var(--card-accent);
+            margin-bottom: 16px;
+            box-shadow: 0 4px 16px rgba(38, 208, 206, 0.2);
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 16px;
+            border: none;
+            color: var(--text-main);
+            box-shadow: 0 2px 12px rgba(38, 208, 206, 0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-8px) scale(1.03);
+            box-shadow: 0 8px 24px rgba(38, 208, 206, 0.18);
+        }
+
+        .education-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .education-card {
+            background: var(--card-bg);
+            border-left: 6px solid var(--card-accent);
+            border-radius: 12px;
+            padding: 18px 24px;
+            margin-bottom: 0;
+            flex: 1 1 260px;
+            min-width: 260px;
+            color: var(--text-main);
+        }
+
+        .navbar,
+        footer {
+            background: var(--gradient-start);
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border-left: 6px solid var(--card-accent);
+            border-radius: 12px;
+            padding: 18px 24px;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .badge-tech {
+            background: var(--card-accent);
+            color: #232526;
+            font-weight: 600;
+            margin: 2px 6px 2px 0;
+        }
+
+        .title-left {
+            text-align: left;
+            font-size: 150%;
+        }
+    </style>
+</head>
+
+<body data-spy="scroll" data-target="#navbar" data-offset="70">
+
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top" style="background:var(--card-bg);">
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">Sobre Mí</a></li>
+                <li class="nav-item"><a class="nav-link" href="#services">Servicios</a></li>
+                <li class="nav-item"><a class="nav-link" href="#experience">Experiencia</a></li>
+                <li class="nav-item"><a class="nav-link" href="#education">Certificaciones</a></li>
+                <li class="nav-item"><a class="nav-link" href="#projects">Proyectos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="pt-5 pb-3 text-center">
+        <div class="row">
+            <div class="col-4">
+                <header class="container-fluid pt-5 pb-3" style="width: 100%;">
+                    <div class="row align-items-center">
+                        <div class="col-md-12 text-center">
+                            <img src="imagenes/perfil.jpg" alt="Foto de perfil"
+                                class="profile-pic animate__animated animate__fadeInDown">
+                            <div class="display-4 animate__animated animate__fadeInDown">Juan Carlos Yasig</div>
+                            <p class="lead animate__animated animate__fadeInUp">Desarrollador Web</p>
+                        </div>
+                        <div class="col-md-12">
+                            <hr style="border-color:var(--card-accent);">
+                            <div class="d-flex flex-wrap align-items-center mb-2 text-center justify-content-center">
+                                <span class="badge badge-tech">PHP</span>
+                                <span class="badge badge-tech">HTML</span>
+                                <span class="badge badge-tech">Bootstrap</span>
+                                <span class="badge badge-tech">SQL</span>
+                                <span class="badge badge-tech">Javascript</span>
+                                <span class="badge badge-tech">CSS</span>
+                                <span class="badge badge-tech">AJAX</span>
+                                <span class="badge badge-tech">Cloud Hosting</span>
+                                <span class="badge badge-tech">Canva</span>
+                            </div>
+                            <hr style="border-color:var(--card-accent);">
+                        </div>
+                    </div>
+                </header>
+
+                <div class="col-md-12">
+                    <div class="row justify-content-center mb-3">
+                        <div class="col-6">
+                            <div class="card text-center p-3"
+                                style="border-radius: 16px; min-width: 120px; background: var(--card-bg); color: var(--text-main);">
+                                <div class="mb-2">
+                                    <span class="rounded-circle bg-light d-inline-block"
+                                        style="width:40px; height:40px; line-height:40px;">
+                                        <img src="iconos/sobre.svg" alt="Email" width="24" height="24"
+                                            style="vertical-align:middle;">
+                                    </span>
+                                </div>
+                                <div>
+                                    <span id="emailText" style="font-size: 76%;">juancarlosyasig-85@hotmail.com</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card text-center p-3"
+                                style="border-radius: 16px; min-width: 120px; background: var(--card-bg); color: var(--text-main);">
+                                <div class="mb-2">
+                                    <span class="rounded-circle bg-light d-inline-block"
+                                        style="width:40px; height:40px; line-height:40px;">
+                                        <img src="iconos/llamada-telefonica.svg" alt="Teléfono" width="24" height="24"
+                                            style="vertical-align:middle;">
+                                    </span>
+                                </div>
+                                <div>
+                                    <span id="phoneText">+593 967 212 2283</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row justify-content-center">
+                        <div class="col-auto">
+                            <a href="https://www.facebook.com/junior.yasig.9" target="_blank" class="mx-2"
+                                data-toggle="tooltip" title="Facebook">
+                                <span class="rounded-circle bg-light d-inline-block text-center">
+                                    <img src="iconos/fb.png" alt="Facebook" width="40" height="40"
+                                        style="vertical-align:middle;">
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col-auto">
+                            <a href="https://instagram.com/juanelocy" target="_blank" class="mx-2" data-toggle="tooltip"
+                                title="Instagram">
+                                <span class="rounded-circle bg-light d-inline-block text-center">
+                                    <img src="iconos/ig.png" alt="Instagram" width="40" height="40"
+                                        style="vertical-align:middle;">
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col-auto">
+                            <a href="https://github.com/juanelocy" target="_blank" class="mx-2" data-toggle="tooltip"
+                                title="GitHub">
+                                <span class="rounded-circle bg-light d-inline-block text-center">
+                                    <img src="iconos/gh.png" alt="GitHub" width="40" height="40"
+                                        style="vertical-align:middle;">
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col-auto">
+                            <a href="https://linkedin.com/in/juancarlosyasig" target="_blank" class="mx-2"
+                                data-toggle="tooltip" title="LinkedIn">
+                                <span class="rounded-circle bg-light d-inline-block text-center">
+                                    <img src="iconos/linkedin.png" alt="LinkedIn" width="40" height="40"
+                                        style="vertical-align:middle;">
+                                </span>
+                            </a>
+                        </div>
+                        <div class="col-auto">
+                            <a href="https://wa.me/593967212283?text=Hola%20Juan%2C%20te%20contacto%20desde%20tu%20Hoja%20de%20Vida%20Web"
+                                target="_blank" class="mx-2" data-toggle="tooltip" title="WhatsApp">
+                                <span class="rounded-circle bg-light d-inline-block text-center">
+                                    <img src="iconos/wh.png" alt="WhatsApp" width="40" height="40"
+                                        style="vertical-align:middle;">
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <hr style="border-color:var(--card-accent);">
+                </div>
+                <br>
+
+
+                <div class="col-md-12">
+                    <h2 class="display-4 animate__animated animate__fadeInDown title-left">Educación</h2>
+                    <div class="animate__animated animate__fadeInRight" style="text-align: left;">
+                        <ul class="mb-0">
+                            <li>Bachillerato en Ciencias Generales</li>
+                            <li>Certificación B1 en Inglés</li>
+                            <li>Ingeniería en Tecnologías de la Información</li>
+                        </ul>
+                    </div>
+                </div>
+                <br>
+
+
+                <div class="col-md-12">
+                    <h2 class="display-4 animate__animated animate__fadeInDown title-left">Hobbies</h2>
+                    <div class="animate__animated animate__fadeInRight" style="text-align: left;">
+                        <ul class="mb-0">
+                            <li>Entrenar MMA</li>
+                            <li>Jugar videojuegos</li>
+                            <li>Cocinar</li>
+                            <li>Aprender cosas nuevas</li>
+                        </ul>
+                    </div>
+                </div>
+                <br>
+
+            </div>
+            <div class="col-8">
+                <section id="about" class="container-fluid my-5" style="text-align: left;">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="section-title animate__animated animate__fadeInLeft">Sobre mi</h2>
+                            <div class="card animate__animated animate__fadeInRight p-4 text-justify">
+                                <p>Soy un desarrollador web Full Stack con experiencia en PHP, HTML, Bootstrap, SQL
+                                    (MySQL y
+                                    MariaDB), AJAX y servicios en la nube. Actualmente trabajo en Idrix como
+                                    desarrollador y soporte
+                                    para la empresa Sycof, uno de los principales clientes. Me apasiona crear soluciones
+                                    tecnológicas eficientes y seguras, y tengo experiencia en alojamiento gratuito de
+                                    aplicaciones
+                                    web en la nube.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+                <section id="services" class="container-fluid my-5" style="text-align: left;">
+                    <h2 class="section-title animate__animated animate__fadeInLeft">Servicios a ofrecer</h2>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="badge badge-tech">Desarrollo Web Full Stack</span>
+                        <span class="badge badge-tech">Gestión de Bases de Datos</span>
+                        <span class="badge badge-tech">Despliegue en la Nube</span>
+                        <span class="badge badge-tech">Soporte Técnico</span>
+                    </div>
+                </section>
+
+                <section id="experience" class="container-fluid my-5" style="text-align: left;">
+                    <h2 class="section-title animate__animated animate__fadeInLeft">Experiencia profesional</h2>
+                    <div class="card animate__animated animate__fadeInRight p-4 text-justify">
+                        <h5 class="card-title">Idrix Technology S.A.</h5>
+                        <p class="card-text"><strong>Rol:</strong> Full Stack Developer y Testing</p>
+                        <p class="card-text"><strong>Duración:</strong> 1 año (actualmente trabajando)</p>
+                        <p class="card-text"><strong>Responsabilidades:</strong> Desarrollo y soporte para Sycof,
+                            Agrilatexa y Ceramicas al Costo, gestión de bases
+                            de datos SQL y desarrollo de aplicaciones web bajo la empresa de Idrix Technology.</p>
+                    </div>
+                </section>
+
+
+
+                <section id="education" class="container-fluid my-5" style="text-align: left;">
+                    <h2 class="section-title animate__animated animate__fadeInLeft">Certificaciones</h2>
+                    <div class="education-cards">
+                        <div class="education-card animate__animated animate__fadeInUp">
+                            <h5>Certificado de "Introducción a la Programación"</h5>
+                            <p class="text-justify">Universidad de las Fuerzas Armadas ESPE - 18 de abril de 2022</p>
+                        </div>
+                        <div class="education-card animate__animated animate__fadeInUp">
+                            <h5>Administrador de servidores</h5>
+                            <p class="text-justify">100 horas - Fundacion Carlos Slim - 28 de enero de 2024</p>
+                        </div>
+                        <div class="education-card animate__animated animate__fadeInUp">
+                            <h5>Administrador de base de datos relacionales</h5>
+                            <p class="text-justify">114 horas - Fundacion Carlos Slim - 1 de febrero de 2024</p>
+                        </div>
+                        <div class="education-card animate__animated animate__fadeInUp">
+                            <h5>Primer lugar en el "2do. Concurso de Posters Cientificos de Proyectos Sociales"</h5>
+                            <p class="text-justify">Universidad de las Fuerzas Armadas ESPE - 28 de agosto de 2024</p>
+                        </div>
+                        <div class="education-card animate__animated animate__fadeInUp">
+                            <h5>Desarrollador de Software</h5>
+                            <p class="text-justify">300 horas - IDrix Technology S.A. - 26 de octubre de 2024</p>
+                        </div>
+                        <div class="education-card animate__animated animate__fadeInUp">
+                            <h5>Desarrollador Back-end</h5>
+                            <p class="text-justify">106 horas - Fundacion Carlos Slim - 27 de octubre de 2024</p>
+                        </div>
+                        <div class="education-card animate__animated animate__fadeInUp">
+                            <h5>Gestiona tu portafolio como desarrollador</h5>
+                            <p class="text-justify">22 horas - Fundacion Carlos Slim - 2 de noviembre de 2024</p>
+                        </div>
+                        <div class="education-card animate__animated animate__fadeInUp">
+                            <h5>Control de versiones</h5>
+                            <p class="text-justify">21 horas - Fundacion Carlos Slim - 3 de noviembre de 2024</p>
+                        </div>
+                    </div>
+                </section>
+                <section id="projects" class="container-fluid my-5" style="text-align: left;">
+                    <h2 class="section-title animate__animated animate__fadeInLeft">Proyectos destacados</h2>
+                    <div class="row">
+                        <div class="col-md-4 mb-4">
+                            <div class="project-card animate__animated animate__fadeInUp" data-toggle="modal"
+                                data-target="#modalProyecto1" style="cursor:pointer;">
+                                <h5>Tesis: Sistema de Ciberseguridad con Nmap e IA</h5>
+                                <p>Desarrollé una solución que realiza escaneo de vulnerabilidades con Nmap y utiliza IA
+                                    para mitigar riesgos.<br>
+                                    <a href="https://github.com/juanelocy/UIC_Tesis_YasigJuan" target="_blank"
+                                        style="color:var(--text-accent)">Repositorio Git</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="project-card animate__animated animate__fadeInUp" data-toggle="modal"
+                                data-target="#modalProyecto2" style="cursor:pointer;">
+                                <h5>Página web informativa</h5>
+                                <p>Desarrollo y despliegue de una web informativa alojada en Vercel.<br>
+                                    <a href="https://github.com/JuanitoYasig/Greenesse" target="_blank"
+                                        style="color:var(--text-accent)">Repositorio Git</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="project-card animate__animated animate__fadeInUp" data-toggle="modal"
+                                data-target="#modalProyecto3" style="cursor:pointer;">
+                                <h5>Licorería online</h5>
+                                <p>Desarrollo de e-commerce para licorería, alojada en Vercel.<br>
+                                    <a href="https://github.com/juanelocy/licoreria-vercel" target="_blank"
+                                        style="color:var(--text-accent)">Repositorio Git</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal Proyecto 1 -->
+                    <div class="modal fade" id="modalProyecto1" tabindex="-1" role="dialog"
+                        aria-labelledby="modalProyecto1Label" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content" style="color:#232526;">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modalProyecto1Label">Tesis: Sistema de Ciberseguridad
+                                        con Nmap e IA</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Proyecto de tesis enfocado en la ciberseguridad, donde se desarrolló un sistema
+                                        que realiza escaneo de vulnerabilidades en redes usando Nmap y emplea
+                                        inteligencia artificial para analizar los resultados y proponer acciones de
+                                        mitigación. Incluye integración con bases de datos y reportes automáticos.</p>
+                                    <p><strong>Tecnologías:</strong> Python, Nmap, IA, SQL</p>
+                                    <a href="https://github.com/juanelocy/UIC_Tesis_YasigJuan" target="_blank"
+                                        style="color:var(--text-accent)">Ver repositorio en GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal Proyecto 2 -->
+                    <div class="modal fade" id="modalProyecto2" tabindex="-1" role="dialog"
+                        aria-labelledby="modalProyecto2Label" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content" style="color:#232526;">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modalProyecto2Label">Página web informativa</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Desarrollo y despliegue de una página web informativa sobre sostenibilidad y
+                                        medio ambiente, alojada en Vercel. El sitio incluye diseño responsivo,
+                                        optimización SEO y recursos multimedia.</p>
+                                    <p><strong>Tecnologías:</strong> HTML, CSS, Bootstrap, Vercel</p>
+                                    <a href="https://github.com/JuanitoYasig/Greenesse" target="_blank"
+                                        style="color:var(--text-accent)">Ver repositorio en GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal Proyecto 3 -->
+                    <div class="modal fade" id="modalProyecto3" tabindex="-1" role="dialog"
+                        aria-labelledby="modalProyecto3Label" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document">
+                            <div class="modal-content" style="color:#232526;">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="modalProyecto3Label">Licorería online</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p>Desarrollo de una tienda online para licorería, con catálogo de productos,
+                                        carrito de compras y sistema de pedidos. El proyecto está alojado en Vercel y
+                                        utiliza tecnologías modernas para e-commerce.</p>
+                                    <p><strong>Tecnologías:</strong> HTML, CSS, Bootstrap, JavaScript, Vercel</p>
+                                    <a href="https://github.com/juanelocy/licoreria-vercel" target="_blank"
+                                        style="color:var(--text-accent)">Ver repositorio en GitHub</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <footer class="container-fluid text-center py-4">
+        <p>&copy; 2024 Juan Yasig - Todos los derechos reservados</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
