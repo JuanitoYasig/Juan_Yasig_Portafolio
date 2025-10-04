@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoja de Vida</title>
+    <title>Portafolio - Juan Yasig</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,119 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Madimi+One&display=swap"
         rel="stylesheet">
-    <style>
-        /*
-        paleta de colores
-        #BD2A2E
-        #3B3936
-        #B2BEBF
-        #889C9B
-        #486966
-        */
-        :root {
-            --gradient-start: #3B3936;
-            --gradient-end: #B2BEBF;
-            --card-bg: #486966;
-            --card-accent: #889C9B;
-            --text-main: #ffffff;
-            --text-accent: #26d0ce;
-        }
-
-        * {
-            font-family: "Kanit", sans-serif;
-        }
-
-        html {
-            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
-        }
-
-        body {
-            background: transparent;
-            color: var(--text-main);
-            margin-left: 5%;
-            margin-right: 5%;
-            overflow-x: hidden;
-        }
-
-        .section-title {
-            font-size: 2rem;
-            color: var(--text-accent);
-            margin-bottom: 24px;
-            font-weight: 700;
-            border-bottom: 2px solid var(--card-accent);
-            padding-bottom: 10px;
-        }
-
-        .profile-pic {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 4px solid var(--card-accent);
-            margin-bottom: 16px;
-            box-shadow: 0 4px 16px rgba(38, 208, 206, 0.2);
-        }
-
-        .card {
-            background: var(--card-bg);
-            border-radius: 16px;
-            border: none;
-            color: var(--text-main);
-            box-shadow: 0 2px 12px rgba(38, 208, 206, 0.08);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .card:hover {
-            transform: translateY(-8px) scale(1.03);
-            box-shadow: 0 8px 24px rgba(38, 208, 206, 0.18);
-        }
-
-        .education-cards {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .education-card {
-            background: var(--card-bg);
-            border-left: 6px solid var(--card-accent);
-            border-radius: 12px;
-            padding: 18px 24px;
-            margin-bottom: 0;
-            flex: 1 1 260px;
-            min-width: 260px;
-            color: var(--text-main);
-        }
-
-        .navbar,
-        footer {
-            background: var(--gradient-start);
-        }
-
-        .project-card {
-            background: var(--card-bg);
-            border-left: 6px solid var(--card-accent);
-            border-radius: 12px;
-            padding: 18px 24px;
-            margin-bottom: 20px;
-            color: var(--text-main);
-        }
-
-        .badge-tech {
-            background: var(--card-accent);
-            color: #232526;
-            font-weight: 600;
-            margin: 2px 6px 2px 0;
-        }
-
-        .title-left {
-            text-align: left;
-            font-size: 150%;
-        }
-        .text-name {
-            font-size: 275%;
-        }
-    </style>
+    <link rel="stylesheet" href="estilos.css">
 </head>
 
 <body data-spy="scroll" data-target="#navbar" data-offset="70">
@@ -154,12 +42,14 @@
                         <div class="col-md-12 text-center">
                             <img src="imagenes/perfil.jpg" alt="Foto de perfil"
                                 class="profile-pic animate__animated animate__fadeInDown">
-                            <div class="display-4 animate__animated animate__fadeInDown text-name">Juan Carlos Yasig</div>
+                            <div class="display-4 animate__animated animate__fadeInDown text-name">Juan Carlos Yasig
+                            </div>
                             <p class="lead animate__animated animate__fadeInUp">Desarrollador Web</p>
                         </div>
                         <div class="col-md-12">
                             <hr style="border-color:var(--card-accent);">
-                            <div class="d-flex flex-wrap align-items-center mb-2 text-center justify-content-center">
+                            <div
+                                class="d-flex flex-wrap align-items-center mb-2 text-center justify-content-center animate__animated animate__fadeInDown">
                                 <span class="badge badge-tech">PHP</span>
                                 <span class="badge badge-tech">HTML</span>
                                 <span class="badge badge-tech">Bootstrap</span>
@@ -176,88 +66,85 @@
                 </header>
 
                 <div class="col-md-12">
-                    <div class="row justify-content-center mb-3">
-                        <!-- <div class="col-6">
-                            <div class="card text-center p-3"
-                                style="border-radius: 16px; min-width: 120px; background: var(--card-bg); color: var(--text-main);">
-                                <div class="mb-2">
-                                    <span class="rounded-circle bg-light d-inline-block"
-                                        style="width:40px; height:40px; line-height:40px;">
-                                        <img src="iconos/sobre.svg" alt="Email" width="24" height="24"
-                                            style="vertical-align:middle;">
-                                    </span>
-                                </div>
-                                <div>
-                                    <span id="emailText" style="font-size: 60%;">juancarlosyasig-85@hotmail.com</span>
-                                </div>
+                    <div class="d-flex flex-column align-items-center mb-3">
+                        <div class="card text-center p-3 animate__animated animate__fadeInUp"
+                            style="border-radius: 16px; min-width: 120px; background: var(--card-bg); color: var(--text-main); max-width: 250px;">
+                            <div class="mb-2">
+                                <span class="rounded-circle bg-light d-inline-block"
+                                    style="width:40px; height:40px; line-height:40px;">
+                                    <img src="iconos/llamada-telefonica.svg" alt="Teléfono" width="24" height="24"
+                                        style="vertical-align:middle;">
+                                </span>
                             </div>
-                        </div> -->
-                        <div class="col-6">
-                            <div class="card text-center p-3"
-                                style="border-radius: 16px; min-width: 120px; background: var(--card-bg); color: var(--text-main);">
-                                <div class="mb-2">
-                                    <span class="rounded-circle bg-light d-inline-block"
-                                        style="width:40px; height:40px; line-height:40px;">
-                                        <img src="iconos/llamada-telefonica.svg" alt="Teléfono" width="24" height="24"
-                                            style="vertical-align:middle;">
-                                    </span>
-                                </div>
-                                <div>
-                                    <span id="phoneText">+593 967 212 2283</span>
-                                </div>
+                            <div>
+                                <span id="phoneText">+593 967 212 2283</span>
                             </div>
                         </div>
-                    </div>
-                    <div class="row justify-content-center">
-                        <div class="col-md-2">
-                            <a href="https://www.facebook.com/junior.yasig.9" target="_blank" class="mx-2"
-                                data-toggle="tooltip" title="Facebook">
-                                <span class="rounded-circle bg-light d-inline-block text-center">
+                        <style>
+                            .social-icon {
+                                transition: transform 0.25s, box-shadow 0.25s, border 0.25s;
+                                /* border: 4px solid var(--card-bg); */
+                                display: inline-block;
+                            }
+
+                            .social-icon:hover {
+                                transform: scale(1.15);
+                                /* border: 4px solid var(--card-accent); */
+                                box-shadow: 0 4px 12px rgba(38, 208, 206, 0.18);
+                            }
+                        </style>
+                        <div class="d-flex justify-content-center align-items-center mt-3"
+                            style="gap: 12px; flex-wrap: wrap;">
+                            <a href="https://www.facebook.com/junior.yasig.9" target="_blank"
+                                class="mx-1 animate__animated animate__fadeInUp social-anim" data-toggle="tooltip"
+                                title="Facebook">
+                                <span class="bg-light d-inline-block text-center social-icon"
+                                    style="border-radius: 50%;">
                                     <img src="iconos/fb.png" alt="Facebook" width="40" height="40"
                                         style="vertical-align:middle;">
                                 </span>
                             </a>
-                        </div>
-                        <div class="col-md-2">
-                            <a href="https://instagram.com/juanelocy" target="_blank" class="mx-2" data-toggle="tooltip"
+                            <a href="https://instagram.com/juanelocy" target="_blank"
+                                class="mx-1 animate__animated animate__fadeInUp social-anim" data-toggle="tooltip"
                                 title="Instagram">
-                                <span class="rounded-circle bg-light d-inline-block text-center">
+                                <span class="bg-light d-inline-block text-center social-icon"
+                                    style="border-radius: 50%;">
                                     <img src="iconos/ig.png" alt="Instagram" width="40" height="40"
                                         style="vertical-align:middle;">
                                 </span>
                             </a>
-                        </div>
-                        <div class="col-md-2">
-                            <a href="https://github.com/juanelocy" target="_blank" class="mx-2" data-toggle="tooltip"
+                            <a href="https://github.com/juanelocy" target="_blank"
+                                class="mx-1 animate__animated animate__fadeInUp social-anim" data-toggle="tooltip"
                                 title="GitHub">
-                                <span class="rounded-circle bg-light d-inline-block text-center">
+                                <span class="bg-light d-inline-block text-center social-icon"
+                                    style="border-radius: 50%;">
                                     <img src="iconos/gh.png" alt="GitHub" width="40" height="40"
                                         style="vertical-align:middle;">
                                 </span>
                             </a>
-                        </div>
-                        <div class="col-md-2">
-                            <a href="https://linkedin.com/in/juancarlosyasig" target="_blank" class="mx-2"
-                                data-toggle="tooltip" title="LinkedIn">
-                                <span class="rounded-circle bg-light d-inline-block text-center">
+                            <a href="https://linkedin.com/in/juancarlosyasig" target="_blank"
+                                class="mx-1 animate__animated animate__fadeInUp social-anim" data-toggle="tooltip"
+                                title="LinkedIn">
+                                <span class="bg-light d-inline-block text-center social-icon"
+                                    style="border-radius: 50%;">
                                     <img src="iconos/linkedin.png" alt="LinkedIn" width="40" height="40"
                                         style="vertical-align:middle;">
                                 </span>
                             </a>
-                        </div>
-                        <div class="col-md-2">
                             <a href="https://wa.me/593967212283?text=Hola%20Juan%2C%20te%20contacto%20desde%20tu%20Hoja%20de%20Vida%20Web"
-                                target="_blank" class="mx-2" data-toggle="tooltip" title="WhatsApp">
-                                <span class="rounded-circle bg-light d-inline-block text-center">
+                                target="_blank" class="mx-1 animate__animated animate__fadeInUp social-anim"
+                                data-toggle="tooltip" title="WhatsApp">
+                                <span class="bg-light d-inline-block text-center social-icon"
+                                    style="border-radius: 50%;">
                                     <img src="iconos/wh.png" alt="WhatsApp" width="40" height="40"
                                         style="vertical-align:middle;">
                                 </span>
                             </a>
-                        </div>
-                        <div class="col-md-2">
-                            <a href="mailto:juancarlosyasig-85@hotmail.com" 
-                               target="_blank" class="mx-2" data-toggle="tooltip" title="Correo">
-                                <span class="rounded-circle bg-light d-inline-block text-center">
+                            <a href="mailto:juancarlosyasig-85@hotmail.com" target="_blank"
+                                class="mx-1 animate__animated animate__fadeInUp social-anim" data-toggle="tooltip"
+                                title="Correo">
+                                <span class="bg-light d-inline-block text-center social-icon"
+                                    style="border-radius: 50%;">
                                     <img src="iconos/email.png" alt="Correo" width="40" height="40"
                                         style="vertical-align:middle;">
                                 </span>
@@ -317,7 +204,7 @@
                 </section>
                 <section id="services" class="container-fluid my-5" style="text-align: left;">
                     <h2 class="section-title animate__animated animate__fadeInLeft">Servicios a ofrecer</h2>
-                    <div class="d-flex flex-wrap gap-2">
+                    <div class="d-flex flex-wrap gap-2 animate__animated animate__fadeInRight">
                         <span class="badge badge-tech">Desarrollo Web Full Stack</span>
                         <span class="badge badge-tech">Gestión de Bases de Datos</span>
                         <span class="badge badge-tech">Despliegue en la Nube</span>
@@ -379,28 +266,30 @@
                 <section id="projects" class="container-fluid my-5" style="text-align: left;">
                     <h2 class="section-title animate__animated animate__fadeInLeft">Proyectos destacados</h2>
                     <div class="row">
-                        <div class="col-md-4 mb-4">
+                        <div class="col-md-6 mb-4">
                             <div class="project-card animate__animated animate__fadeInUp" data-toggle="modal"
                                 data-target="#modalProyecto1" style="cursor:pointer;">
-                                <h5>Tesis: Sistema de Ciberseguridad con Nmap e IA</h5>
-                                <p>Desarrollé una solución que realiza escaneo de vulnerabilidades con Nmap y utiliza IA
+                                <h5>"Fortify AI"</h5>
+                                <p class="text-justify">Desarrollé una solución llamada "Fortify AI" que realiza escaneo
+                                    de vulnerabilidades con Nmap y utiliza Inteligencia Artificial
                                     para mitigar riesgos.<br>
                                     <a href="https://github.com/juanelocy/UIC_Tesis_YasigJuan" target="_blank"
                                         style="color:var(--text-accent)">Repositorio Git</a>
                                 </p>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-4">
+                        <div class="col-md-6 mb-4">
                             <div class="project-card animate__animated animate__fadeInUp" data-toggle="modal"
                                 data-target="#modalProyecto2" style="cursor:pointer;">
-                                <h5>Página web informativa</h5>
-                                <p>Desarrollo y despliegue de una web informativa alojada en Vercel.<br>
+                                <h5>"Greenesse"</h5>
+                                <p class="text-justify">Desarrollo y despliegue de una web informativa alojada en
+                                    Vercel, dedicada a promover la salud integral y el bienestar.<br>
                                     <a href="https://github.com/JuanitoYasig/Greenesse" target="_blank"
                                         style="color:var(--text-accent)">Repositorio Git</a>
                                 </p>
                             </div>
                         </div>
-                        <div class="col-md-4 mb-4">
+                        <!-- <div class="col-md-4 mb-4">
                             <div class="project-card animate__animated animate__fadeInUp" data-toggle="modal"
                                 data-target="#modalProyecto3" style="cursor:pointer;">
                                 <h5>Licorería online</h5>
@@ -409,7 +298,7 @@
                                         style="color:var(--text-accent)">Repositorio Git</a>
                                 </p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
 
                     <!-- Modal Proyecto 1 -->
@@ -418,22 +307,33 @@
                         <div class="modal-dialog modal-lg" role="document">
                             <div class="modal-content" style="color:#232526;">
                                 <div class="modal-header" style="background: var(--card-bg);">
-                                    <h5 class="modal-title" style="color: var(--text-main);" id="modalProyecto1Label">Tesis: Sistema de Ciberseguridad con Nmap e IA</h5>
+                                    <h5 class="modal-title" style="color: var(--text-main);" id="modalProyecto1Label">
+                                        "Fortify AI" - Sistema de Ciberseguridad con IA </h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
                                 <div class="modal-body" style="text-align: justify;">
-                                    <p><strong>Resumen:</strong> Fortify AI es una aplicación web para analizar la seguridad de dispositivos en redes locales mediante escaneos automáticos de puertos y servicios usando Nmap. El sistema valida direcciones IP, ejecuta escaneos rápidos, muestra resultados en una interfaz moderna y responsiva, y utiliza inteligencia artificial para analizar vulnerabilidades y proponer acciones de mitigación. Todo el flujo es dinámico y seguro, sin almacenar datos sensibles.</p>
-                                    <p><strong>Tecnologías y lenguajes:</strong> PHP, Python, Nmap, Google Generative AI, AJAX, Bootstrap 5, FontAwesome, SQL, HTML, CSS, JavaScript</p>
+                                    <p><strong>Resumen:</strong> "Fortify AI" es una aplicación web para analizar la
+                                        seguridad de dispositivos en redes locales mediante escaneos automáticos de
+                                        puertos y servicios usando Nmap. El sistema valida direcciones IP, ejecuta
+                                        escaneos rápidos, muestra resultados en una interfaz moderna y responsiva, y
+                                        utiliza inteligencia artificial para analizar vulnerabilidades y proponer
+                                        acciones de mitigación. Todo el flujo es dinámico y seguro, sin almacenar datos
+                                        sensibles.</p>
+                                    <p><strong>Tecnologías y lenguajes:</strong> PHP, Python, Nmap, Google Generative
+                                        AI, AJAX, Bootstrap 5, FontAwesome, HTML, CSS, JavaScript</p>
                                     <div class="row">
                                         <div class="col-md-12 mb-3">
                                             <div class="card">
-                                                <div class="card-header text-center" style="background:var(--card-accent);color:#232526;">
-                                                    Fortify AI - Interfaz principal
+                                                <div class="card-header text-center"
+                                                    style="background:var(--card-accent);color:#232526;">
+                                                    Interfaz principal
                                                 </div>
                                                 <div class="card-body text-center">
-                                                    <img src="imagenes/iteracion5.png" alt="Fortify AI Captura 1" class="img-fluid" style="max-height:200px;">
+                                                    <img src="imagenes/iteracion5.png" alt="Fortify AI Captura 1"
+                                                        class="img-fluid"
+                                                        style="max-height:200px; border-bottom-left-radius: 16px; border-bottom-right-radius: 16px;">
                                                 </div>
                                             </div>
                                         </div>
@@ -443,68 +343,89 @@
                                 </div>
                             </div>
                         </div>
-                    </div></div>
+                    </div>
+            </div>
 
-                    <!-- Modal Proyecto 2 -->
-                    <div class="modal fade border-radius" id="modalProyecto2" tabindex="-1" role="dialog"
-                        aria-labelledby="modalProyecto2Label" aria-hidden="true">
-                        <div class="modal-dialog modal-lg" role="document">
-                            <div class="modal-content" style="color:#232526;">
-                                <div class="modal-header" style="background: var(--card-bg);">
-                                    <h5 class="modal-title" style="color: var(--text-main);" id="modalProyecto2Label">Página web informativa</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body" style="text-align: justify;">
-                                    <p><strong>Resumen:</strong> Greenesse es una página web informativa dedicada a la sostenibilidad y el medio ambiente. El sitio ofrece recursos educativos, artículos y multimedia para concienciar sobre prácticas ecológicas y el impacto ambiental. Cuenta con diseño responsivo, optimización SEO y una experiencia de usuario moderna, facilitando el acceso a información relevante sobre sostenibilidad.</p>
-                                    <p><strong>Tecnologías y lenguajes:</strong> HTML, CSS, Bootstrap, Vercel</p>
-                                    <div class="row">
-                                        <div class="col-md-12 mb-3">
-                                            <div class="card">
-                                                <div class="card-header text-center" style="background:var(--card-accent);color:#232526;">
-                                                    Greenesse - Página principal
-                                                </div>
-                                                <div class="card-body text-center">
-                                                    <img src="imagenes/greenesse.png" alt="Greenesse Captura" class="img-fluid" style="max-height:200px;">
-                                                </div>
-                                            </div>
+            <!-- Modal Proyecto 2 -->
+            <div class="modal fade border-radius" id="modalProyecto2" tabindex="-1" role="dialog"
+                aria-labelledby="modalProyecto2Label" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content" style="color:#232526;">
+                        <div class="modal-header" style="background: var(--card-bg);">
+                            <h5 class="modal-title" style="color: var(--text-main);" id="modalProyecto2Label">
+                                "Greenesse" - Página web informativa</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body" style="text-align: justify;">
+                            <p><strong>Resumen:</strong> "Greenesse" es una página web informativa dedicada a promover
+                                la salud integral y el bienestar. Ofrece recursos sobre alimentación saludable,
+                                ejercicio físico y bienestar mental, con galerías visuales, artículos y consejos
+                                prácticos. El sitio cuenta con navegación temática, formularios de contacto, equipo
+                                multidisciplinario y diseño responsivo, facilitando el acceso a información confiable y
+                                actualizada para mejorar la calidad de vida.</p>
+                            <p><strong>Tecnologías y lenguajes:</strong> HTML, CSS, Bootstrap, Vercel</p>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <div class="card">
+                                        <div class="card-header text-center"
+                                            style="background:var(--card-accent);color:#232526;">
+                                            Página principal
+                                        </div>
+                                        <div class="card-body text-center">
+                                            <img src="imagenes/greenesse1.png" alt="Greenesse Captura" class="img-fluid"
+                                                style="max-height:200px; border-bottom-left-radius: 16px; border-bottom-right-radius: 16px;">
                                         </div>
                                     </div>
-                                    <a href="https://github.com/JuanitoYasig/Greenesse" target="_blank"
-                                        style="color: black">Ver repositorio en GitHub</a>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <div class="card">
+                                        <div class="card-header text-center"
+                                            style="background:var(--card-accent);color:#232526;">
+                                            Navegación interna
+                                        </div>
+                                        <div class="card-body text-center">
+                                            <img src="imagenes/greenesse2.png" alt="Greenesse Captura" class="img-fluid"
+                                                style="max-height:200px; border-bottom-left-radius: 16px; border-bottom-right-radius: 16px;">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
+                            <a href="https://github.com/JuanitoYasig/Greenesse" target="_blank" style="color: black">Ver
+                                repositorio en GitHub</a>
                         </div>
                     </div>
-
-                    <!-- Modal Proyecto 3 -->
-                    <div class="modal fade" id="modalProyecto3" tabindex="-1" role="dialog"
-                        aria-labelledby="modalProyecto3Label" aria-hidden="true">
-                        <div class="modal-dialog modal-lg" role="document">
-                            <div class="modal-content" style="color:#232526;">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="modalProyecto3Label">Licorería online</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
-                                </div>
-                                <div class="modal-body">
-                                    <p>Desarrollo de una tienda online para licorería, con catálogo de productos,
-                                        carrito de compras y sistema de pedidos. El proyecto está alojado en Vercel y
-                                        utiliza tecnologías modernas para e-commerce.</p>
-                                    <p><strong>Tecnologías:</strong> HTML, CSS, Bootstrap, JavaScript, Vercel</p>
-                                    <a href="https://github.com/juanelocy/licoreria-vercel" target="_blank"
-                                        style="color:var(--text-accent)">Ver repositorio en GitHub</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-
-
+                </div>
             </div>
+
+            <!-- Modal Proyecto 3 -->
+            <div class="modal fade" id="modalProyecto3" tabindex="-1" role="dialog"
+                aria-labelledby="modalProyecto3Label" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                    <div class="modal-content" style="color:#232526;">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="modalProyecto3Label">Licorería online</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Desarrollo de una tienda online para licorería, con catálogo de productos,
+                                carrito de compras y sistema de pedidos. El proyecto está alojado en Vercel y
+                                utiliza tecnologías modernas para e-commerce.</p>
+                            <p><strong>Tecnologías:</strong> HTML, CSS, Bootstrap, JavaScript, Vercel</p>
+                            <a href="https://github.com/juanelocy/licoreria-vercel" target="_blank"
+                                style="color:var(--text-accent)">Ver repositorio en GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </section>
+
+
         </div>
+    </div>
     </div>
 
 
